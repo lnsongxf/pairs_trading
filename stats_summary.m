@@ -66,7 +66,11 @@ end
 
 % Loading SP Data
 load SP_Index
-1
+[x, dates_id] = intersect(dates, cum_r.DM_5(:,1));
+SP_norm = SP500(dates_id);
+SP_norm = SP_norm ./ SP_norm(1);
+
+fi
 
 %% Returns per year:
 
